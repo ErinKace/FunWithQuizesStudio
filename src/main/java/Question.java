@@ -1,6 +1,5 @@
 public abstract class Question {
     private String question;
-    private String correctAnswer;
     private int totalPossiblePoints;
     private int actualPoints = 0;
     public Question(String question, int totalPossiblePoints) {
@@ -9,10 +8,6 @@ public abstract class Question {
     }
     public void displayQuestion() {
         System.out.println(question);
-    }
-
-    protected String getCorrectAnswer() {
-        return correctAnswer;
     }
 
     public int getTotalPossiblePoints() {

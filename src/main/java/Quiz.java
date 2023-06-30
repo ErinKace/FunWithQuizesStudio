@@ -27,12 +27,18 @@ public class Quiz {
     public void runQuiz() {
         for (Question question : questionList) {
             question.displayQuestion();
+            question.displayPossibleAnswers();
             question.getAnswer();
             question.gradeQuestion();
             actualTotalPoints+=question.getActualPoints();
         }
     }
-    public void getScore() {
-
+    public double calculateScore() {
+        return actualTotalPoints/totalPossiblePoints;
+    }
+    public void printQuizResults() {
+        System.out.println("You scored: "+calculateScore());
+        System.out.println(actualTotalPoints+"/"+totalPossiblePoints);
+        System.out.println();
     }
 }

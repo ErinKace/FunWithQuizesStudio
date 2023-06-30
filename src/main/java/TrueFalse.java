@@ -29,7 +29,6 @@ public class TrueFalse extends Question {
         } else if (answer.toLowerCase().equals("f")){
             actualAnswer = false;
         }
-        input.close();
     }
     public void gradeQuestion() {
         if (actualAnswer == booleanCorrectAnswer) {
